@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+	<style>
+
+		/* Styling the body */
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		
+		/* Styling section, giving background
+			image and dimensions */
+		section {
+			width: 100%;
+			height: 100vh;
+			background:url(https://media.istockphoto.com/id/1246619056/vector/abstract-blue-background.jpg?s=612x612&w=0&k=20&c=KU-3nrzW3BzBHR3voC3FDWZbVY2UNu8WUg5sR_g9PMU=);
+/*url('https://media.geeksforgeeks.org/wp-content/uploads/20210408155049/gfg9.png');*/
+			background-size: cover;
+		}
+		
+		/* Styling the left floating section */
+		section .leftBox {
+			width: 50%;
+			height: 100%;
+			float: left;
+			padding: 50px;
+			box-sizing: border-box;
+		}
+		
+		/* Styling the background of
+			left floating section */
+		section .leftBox .content {
+			color: #fff;
+			/*background: rgba(0, 0, 0, 0.5);*/
+			padding: 40px;
+			transition: .5s;
+		}
+		
+		/* Styling the hover effect
+			of left floating section */
+		section .leftBox .content:hover {
+			background: #1773be;
+			transform: translateX(20px);
+			transition: 0.7s;
+
+		}
+		
+		/* Styling the header of left
+			floating section */
+		section .leftBox .content h1 {
+			margin: 0;
+			padding: 0;
+			font-size: 50px;
+			text-transform: uppercase;
+		}
+		
+		/* Styling the paragraph of
+			left floating section */
+		section .leftBox .content p {
+			margin: 10px 0 0;
+			padding: 0;
+		}
+		
+		/* Styling the three events section */
+		section .events {
+			position: relative;
+			width: 50%;
+			height: 100%;
+			/*background: rgba(0, 0, 0, 0.5);*/
+			float: right;
+			box-sizing: border-box;
+			transform: translateY(-20px);
+		}
+		
+		/* Styling the links of
+		the events section */
+		section .events ul {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: 0;
+			padding: 40px;
+			box-sizing: border-box;
+		}
+		
+		/* Styling the lists of the event section */
+		section .events ul li {
+			list-style: none;
+			/*background: #fff;*/
+			box-sizing: border-box;
+			height: 200px;
+			margin: 15px 0;
+		}
+		
+		/* Styling the time class of events section */
+		section .events ul li .time {
+			position: relative;
+			padding: 20px;
+			background: #211f1f;
+			box-sizing: border-box;
+			width: 30%;
+			height: 100%;
+			float: left;
+			text-align: center;
+			transition: .5s;
+		}
+		
+		/* Styling the hover effect
+			of events section */
+		section .events ul li:hover .time {
+			background: #1773be;
+			transform: translate(20px);
+		}
+		
+		/* Styling the header of time
+			class of events section */
+		section .events ul li .time h2 {
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			font-size: 60px;
+			line-height: 30px;
+		}
+		
+		/* Styling the texts of time
+		class of events section */
+		section .events ul li .time h2 span {
+			font-size: 30px;
+		}
+		
+		/* Styling the details
+		class of events section */
+		section .events ul li .details {
+			padding: 20px;
+			background: #fff;
+			box-sizing: border-box;
+			width: 70%;
+			height: 100%;
+			float: left;
+		}
+		
+		/* Styling the header of the
+		details class of events section */
+		section .events ul li .details h3 {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			font-size: 22px;
+		}
+		
+		/* Styling the lists of details
+		class of events section */
+		section .events ul li .details p {
+			position: relative;
+			margin: 10px 0 0;
+			padding: 0;
+			font-size: 16px;
+		}
+		
+		/* Styling the links of details
+		class of events section */
+		section .events ul li .details a {
+			display: inline-block;
+			text-decoration: none;
+			padding: 10px 15px;
+			border: 1.5px solid #262626;
+			margin-top: 8px;
+			font-size: 18px;
+			transition: .5s;
+		}
+		
+		/* Styling the details class's hover effect */
+		section .events ul li .details a:hover {
+			background: #1773be;
+			
+			border-color: #1773be;
+		}
+
+		.navbar-text{
+              font-weight: bold;
+              font-style: italic;
+              padding-left: 100px;
+              font-size: 35px;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              color:rgb(255, 249, 249);
+              text-transform: capitalize;
+        }
+		.navbar-text:hover{
+              transform: translateY(20px);
+              transition: 0.8s;
+            }
+
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-dark bg-primary">
+		<span class="navbar-text">
+		  EVENT-HUB
+		</span>
+	  </nav>
+	<section>
+		<div class="leftBox">
+			<div class="content">
+				<h1>
+					Events and Shows
+				</h1>
+				
+                <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed tempora deleniti dolorem cumque sunt minima, consectetur placeat. Est at officia, enim, ipsam adipisci fugiat in non culpa quis et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dicta nobis nesciunt, officiis, ullam dignissimos sed, doloremque aliquam id et minima totam odio fugit adipisci nemo maiores optio dolorum unde!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sint tenetur id facere ea impedit in asperiores a? Perferendis nemo inventore laudantium recusandae laboriosam cum suscipit earum veniam harum vero!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores reiciendis explicabo, animi accusantium optio qui pariatur quae velit, sequi sapiente officia eaque aliquam voluptates? Voluptas cumque in unde vitae dicta?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, aliquid nihil illo, voluptatibus, eveniet delectus officia sed accusantium tempora unde omnis ullam natus ipsam. Esse quibusdam nisi assumenda mollitia eum?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi qui voluptatibus pariatur nisi. Expedita enim facilis reprehenderit, ullam adipisci maxime dolore vitae excepturi nobis voluptatem quae possimus obcaecati inventore a.
+				</p>
+
+			</div>
+		</div>
+
+		<div class="events">
+			<ul>
+				<li>
+					<div class="time">
+						<h2>
+							15 <br><span>March</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							Dhurva
+						</h3>
+						
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod harum quis quisquam vero odit, nostrum qui beatae enim delectus est ea, excepturi itaque.
+						</p>
+
+						<a href="#">Registered List</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</div>
+					<div style="clear: both;"></div>
+				</li>
+
+				<li>
+					<div class="time">
+						<h2>
+							27 <br><span>May</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							Music event 
+						</h3>
+						
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptatum culpa aut delectus quia esse fugit necessitatibus temporibus.
+							
+						</p>
+
+						<a href="#">Registered List</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+
+					</div>
+					<div style="clear:both;"></div>
+				</li>
+
+				<li>
+					<div class="time">
+						<h2>
+							12 <br><span>August</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							Dance
+						</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi neque nobis vero nulla excepturi, consectetur obcaecati, molestias perferendis.
+						</p>
+
+						<a href="#">Registered List</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</div>
+					<div style="clear:both;"></div>
+				</li>
+			</ul>
+		</div>
+	</section>
+</body>
+
+</html>
